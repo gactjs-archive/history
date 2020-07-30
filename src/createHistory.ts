@@ -9,7 +9,7 @@ const PopStateEventType = "popstate";
  */
 function getLocation<S extends State>(): Location<S> {
   const { pathname, search, hash } = window.location;
-  const state = window.history.state ?? null;
+  const state = window.history.state || null;
   return {
     pathname,
     search,
